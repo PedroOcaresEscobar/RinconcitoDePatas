@@ -173,7 +173,7 @@ body {
   display: grid;
   place-items: center;
   gap: 50px;
-  height: 70vh;
+
   padding: 0 32px;
 }
 /*Contenedor Login*/
