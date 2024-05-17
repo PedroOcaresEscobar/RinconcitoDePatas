@@ -1,0 +1,759 @@
+@import url("section-loMasVendido.css");
+@import url("modalMenu.css");
+@import url("adopcion.css");
+body {
+  background: url("../img/probar.jpg");
+}
+
+/* ESTILO NAV BAR */
+.navbar-nav .nav-item {
+  margin-right: 25px;
+}
+.navbar-brand {
+  margin-left: 20px;
+}
+.navbar-custom .nav-link {
+  color: #737373;
+  font-size: medium;
+  font-family: system-ui;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #466aa2 !important;
+  font-weight: bold;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: white !important;
+  background-color: #466aa2;
+  border-radius: 2.5px;
+}
+
+.navbar-custom .form-control {
+  color: #737373;
+  font-family: system-ui;
+  font-size: small;
+  border-radius: 2.5px;
+}
+
+.navbar-custom .btn-outline-success {
+  background-color: #466aa2;
+  color: white;
+  font-family: system-ui;
+  border-color: #466aa2;
+  border-radius: 2.5px;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #d7604b;
+  --bs-btn-hover-border-color: #d7604b;
+  --bs-btn-active-color: white;
+  font-size: medium;
+  --bs-btn-active-bg: #d7604b;
+  --bs-btn-active-border-color: #d7604b;
+  --bs-btn-focus-shadow-rgb: white;
+}
+
+/* ESTILO PARA EL CARRUSEL DE IMAGENES */
+#carouselExampleAutoplaying {
+  margin: 0 auto;
+}
+
+.carousel-inner img {
+  height: 30vw;
+  object-fit: cover;
+}
+
+.carousel-control-next-icon {
+  background-image: url("../img/arrow_right.svg") !important;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../img/arrow_left.svg") !important;
+}
+
+/* ESTILO PARA LOS BOTONES A USAR */
+.card.card-consulta,
+.card.card-producto,
+.card-body {
+  .btn-agendar {
+    margin-top: 15px;
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #466aa2;
+    --bs-btn-border-color: #466aa2;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d7604b;
+    --bs-btn-hover-border-color: #d7604b;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #d7604b;
+    --bs-btn-active-border-color: #d7604b;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #466aa2;
+    --bs-btn-disabled-border-color: #466aa2;
+    font-family: system-ui;
+    font-size: medium;
+  }
+}
+
+/* ESTILO PARA CARDVIEW */
+
+.col.card.card-img {
+  height: 268px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card.productos-card-custom {
+  height: 100%;
+  width: 100%;
+  min-width: 24rem;
+}
+
+.card.agendar-hora-card-custom {
+  height: 100%;
+  width: 100%;
+}
+
+.card-agendar-hora-img {
+  height: 268px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ESTILO PARA LA PÁGINA CONTACTO */
+.btn.btn-primary-contacto-custom {
+  border-radius: 2.5px;
+  width: 100%;
+  height: 40px;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #466aa2;
+  --bs-btn-border-color: #466aa2;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d7604b;
+  --bs-btn-hover-border-color: #d7604b;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #d7604b;
+  --bs-btn-active-border-color: #d7604b;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #466aa2;
+  --bs-btn-disabled-border-color: #466aa2;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: small !important;
+}
+
+/* ESTILO PARA BOTON CERRAR SHOW DIALOG */
+.btn.btn-custom-cerrar-advertencia {
+  border-radius: 2.5px;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #466aa2;
+  --bs-btn-border-color: #466aa2;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d7604b;
+  --bs-btn-hover-border-color: #d7604b;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #d7604b;
+  --bs-btn-active-border-color: #d7604b;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #466aa2;
+  --bs-btn-disabled-border-color: #466aa2;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: medium !important;
+}
+
+/* Estilo para Login */
+/* Section Login*/
+.login_login {
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  height: 70vh;
+  padding: 0 32px;
+}
+/*Contenedor Login*/
+.card_login {
+  overflow: hidden;
+  margin-top: 0px;
+  position: relative;
+  z-index: 3;
+  width: 94%;
+  padding: 170px 30px 54px;
+  border-radius: 24px;
+  border: 2px #737373;
+  background-color: rgba(255, 255, 255);
+  text-align: center;
+  box-shadow: 0 100px 100px rgb(0 0 0/ 5%);
+}
+/*Parte superior del login (Naranjo)*/
+.card_login::before {
+  content: "";
+  position: absolute;
+  top: -860px;
+  left: 50%;
+  translate: -50% 0;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background: #d7604b;
+}
+/*Logo del Login*/
+.card_login .logo_login {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  translate: -50% 0;
+  width: 74px;
+  height: 74px;
+}
+/*Titulo del Login*/
+.card_login > .h2_login {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 38px;
+  font-weight: bold;
+  color: #466aa2;
+}
+/*Contenedor del Formulario Login*/
+.form_login {
+  margin-bottom: 20px;
+  display: grid;
+  gap: 12px;
+}
+/*Diseño para los Input y el botón iniciar*/
+.form_login :is(input, button) {
+  width: 100%;
+  height: 45px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-family: inherit;
+}
+/*Diseño para los Input solamente*/
+form > input {
+  border: 0;
+  padding: 0 24px;
+  color: #222222;
+  background: #ededed;
+}
+.form > input::placeholder {
+  color: rgb(0 0 0 /28%);
+}
+/*Diseño para el Boton Login*/
+.login_login .card_login .form_login .boton_login {
+  border: 0;
+  color: #ededed;
+  background: #466aa2;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+/*Cambio de tamaño para dispositivos con ancho superior a 500px*/
+@media (width >= 500px) {
+  .card_login {
+    width: 360px;
+    height: 550px;
+  }
+}
+
+/* Estilo para el MODAL.REGISTRO */
+.modal2 {
+  display: none; /* Por defecto, ocultar el modal */
+  position: fixed; /* Para mantener el modal fijo en la ventana */
+  z-index: 3; /* Poner el modal por encima de todo el contenido */
+  left: 0;
+  top: 0;
+  width: 100%; /* El modal ocupará toda la ventana */
+  height: 100%;
+  overflow: auto; /* Añadir desplazamiento si el contenido del modal es demasiado grande */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+/* Estilo para el contenido del modal */
+.modal-content2 {
+  margin: 3% auto; /* Centrar vertical y horizontalmente */
+  width: 500px; /* Ancho del contenido del moda|l */
+}
+
+/* Estilo para el botón de cerrar */
+.close2 {
+  position: relative;
+  color: white;
+  z-index: 100;
+  top: 50px; /* Ajusta la distancia desde la parte superior */
+  right: 20px; /* Ajusta la distancia desde el borde derecho */
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+}
+/*Estilo para mostrar un dedo para cliclear el boton cerrar  */
+.close2:hover,
+.close2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Contenedor Modal.Registro*/
+.card_login_modal {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  margin-right: auto;
+  padding: 170px 30px 54px;
+  border-radius: 24px;
+  background-color: white;
+  text-align: center;
+}
+/*Parte superior (Naranjo) del Modal.Registro*/
+.card_login_modal::before {
+  content: "";
+  position: absolute;
+  top: -850px;
+  left: 50%;
+  translate: -50% 0;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background: #d7604b;
+}
+.background_login_modal::after {
+  content: "";
+  position: inherit;
+  right: -50vmin;
+  bottom: -55vmin;
+  width: 1000px;
+  height: inherit;
+  border-radius: inherit;
+  background: #143d81;
+}
+/*Logo del Modal*/
+.card_login_modal .logo_login_modal {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  translate: -50% 0;
+  width: 74px;
+  height: 74px;
+}
+/*Titulo del Modal*/
+.card_login_modal > .h2_login_modal {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 38px;
+  font-weight: bold;
+  color: #466aa2;
+}
+/*Contenedor del Formulario Modal.Registro*/
+.form_login_modal {
+  margin: 20px 0 20px;
+  display: grid;
+  gap: 12px;
+}
+/*Diseño para los Input*/
+.form_login_modal :is(input) {
+  width: 100%;
+  height: 30px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-family: system-ui;
+}
+/*Diseño el botón iniciar*/
+.form_login_modal :is(button) {
+  width: 40%;
+  height: 30px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-family: inherit;
+  margin-right: auto;
+  margin-left: auto;
+}
+form > .input_login_modal {
+  border: 0;
+  padding: 0 24px;
+  color: #222222;
+  background: #ededed;
+}
+
+.form_modal > input::placeholder {
+  color: rgb(0 0 0 /28%);
+}
+/*Diseño para el Boton Modal.Registro*/
+.card_login_modal .form_login_modal #boton_login_modal {
+  border: 0;
+  color: #ededed;
+  background: #466aa2;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+/*Cambio de tamaño para dispositivos con ancho superior a 500px*/
+@media (width >= 500px) {
+  .login_logi_modal {
+    padding: 0;
+  }
+  .card_login_modal {
+    margin: 0;
+    width: 500px;
+  }
+}
+/*Cambio de tamaño para dispositivos con ancho inferior a 500px*/
+@media (width < 500px) {
+  .card_login_modal {
+    width: 360px; /* Ancho Cuando es menor a 500px para que no se rompa */
+  }
+  .modal-content2 {
+    margin: 3% auto; /* Centrar vertical y horizontalmente */
+    width: 360px; /* Ancho del contenido del moda|l */
+  }
+  .card_login {
+    margin: 50% auto; /* Centrar vertical y horizontalmente */
+    width: 300px; /* Ancho Cuando es menor a 500px para que no se rompa */
+  }
+  .modal-content {
+    margin: 3% auto; /* Centrar vertical y horizontalmente */
+    width: 300px; /* Ancho del contenido del moda|l */
+  }
+}
+
+/* ESTILO DEL FOOTER */
+.bg-custom-footer {
+  color: white;
+  background-color: #466aa2;
+  .text-white {
+    text-decoration: none;
+  }
+}
+.imagendeldia {
+  text-align: center;
+  img {
+    object-fit: cover;
+    aspect-ratio: 400/300;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+  }
+}
+
+.botonayuda {
+  --background: #62abff;
+  --icon-color: #414856;
+  --shape-color-01: #b8cbee;
+  --shape-color-02: #7691e8;
+  --shape-color-03: #fdd053;
+  --width: 70px;
+  --height: 70px;
+  --border-radius: var(--height);
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.botonayuda .btn {
+  border: 2px solid black;
+  box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 1);
+  background-image: url(https://ih1.redbubble.net/image.2196906629.0100/flat,750x,075,f-pad,750x1000,f8f8f8.jpg);
+  background-size: cover;
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  z-index: 3;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: plus-animation-reverse 0.5s ease-out forwards;
+  animation: plus-animation-reverse 0.5s ease-out forwards;
+}
+.botonayuda .btn::before,
+.botonayuda .btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  background: #fff;
+}
+.botonayuda .btn::before {
+  width: 4px;
+  height: 28px;
+}
+.botonayuda .btn::after {
+  width: 28px;
+  height: 4px;
+}
+.botonayuda .tooltip {
+  width: 90px;
+  height: 75px;
+  border-radius: 70px;
+  position: absolute;
+  background: #fff;
+  z-index: 2;
+  padding: 0 15px;
+  box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+  opacity: 0;
+  top: 0;
+
+  justify-content: space-around;
+  align-items: center;
+  transition: opacity 0.15s ease-in, top 0.15s ease-in, width 0.15s ease-in;
+}
+.botonayuda .tooltip > svg {
+  width: 100%;
+  height: 26px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.botonayuda .tooltip > svg .icon {
+  fill: none;
+  stroke: var(--icon-color);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+.botonayuda .tooltip > svg:hover .icon {
+  opacity: 1;
+}
+.botonayuda .tooltip::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  bottom: -8px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+.botonayuda > svg {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 1;
+  transform: scale(0);
+}
+.botonayuda > svg .shape {
+  fill: none;
+  stroke: none;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50% 20%;
+}
+.botonayuda input {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+}
+.botonayuda input:checked ~ svg {
+  -webkit-animation: pang-animation 1.2s ease-out forwards;
+  animation: pang-animation 1.2s ease-out forwards;
+}
+.botonayuda input:checked ~ svg .shape:nth-of-type(1) {
+  transform: translate(25px, 30%) rotate(40deg);
+}
+.botonayuda input:checked ~ svg .shape:nth-of-type(2) {
+  transform: translate(-4px, 30%) rotate(80deg);
+}
+.botonayuda input:checked ~ svg .shape:nth-of-type(3) {
+  transform: translate(12px, 30%) rotate(120deg);
+}
+.botonayuda input:checked ~ svg .shape:nth-of-type(4) {
+  transform: translate(8px, 30%) rotate(160deg);
+}
+.botonayuda input:checked ~ svg .shape:nth-of-type(5) {
+  transform: translate(21px, 30%) rotate(200deg);
+}
+.botonayuda input:checked ~ svg .shape:nth-of-type(6) {
+  transform: translate(0px, 30%) rotate(240deg);
+}
+.botonayuda input:checked ~ svg .shape:nth-of-type(7) {
+  transform: translate(17px, 30%) rotate(280deg);
+}
+.botonayuda input:checked ~ svg .shape:nth-of-type(8) {
+  transform: translate(-3px, 30%) rotate(320deg);
+}
+.botonayuda input:checked ~ svg .shape:nth-of-type(9) {
+  transform: translate(25px, 30%) rotate(360deg);
+}
+.botonayuda input:checked ~ .btn {
+  -webkit-animation: plus-animation 0.5s ease-out forwards;
+  animation: plus-animation 0.5s ease-out forwards;
+}
+.botonayuda input:checked ~ .tooltip {
+  width: 190px;
+  height: 94px;
+  -webkit-animation: stretch-animation 1s ease-out forwards 0.15s;
+  animation: stretch-animation 1s ease-out forwards 0.15s;
+  top: -118px;
+  opacity: 1;
+}
+
+@-webkit-keyframes pang-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes pang-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes plus-animation {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  20% {
+    transform: rotate(60deg) scale(0.93);
+  }
+  55% {
+    transform: rotate(35deg) scale(0.97);
+  }
+  80% {
+    transform: rotate(48deg) scale(0.94);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.95);
+  }
+}
+@keyframes plus-animation {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  20% {
+    transform: rotate(60deg) scale(0.93);
+  }
+  55% {
+    transform: rotate(35deg) scale(0.97);
+  }
+  80% {
+    transform: rotate(48deg) scale(0.94);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.95);
+  }
+}
+@-webkit-keyframes plus-animation-reverse {
+  0% {
+    transform: rotate(45deg) scale(0.95);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  55% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+@keyframes plus-animation-reverse {
+  0% {
+    transform: rotate(45deg) scale(0.95);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  55% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+@-webkit-keyframes stretch-animation {
+  0% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 0.9);
+  }
+  30% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.05, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes stretch-animation {
+  0% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 0.9);
+  }
+  30% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.05, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.socials {
+  position: fixed;
+  display: block;
+  left: 20px;
+  bottom: 20px;
+}
+.socials > a {
+  display: block;
+  width: 30px;
+  opacity: 0.2;
+  transform: scale(var(--scale, 0.8));
+  transition: transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
+}
+.socials > a:hover {
+  --scale: 1;
+}

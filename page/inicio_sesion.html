@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html class="h-100" lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="../js/inicio_sesion.js"></script>
+    <title>Inicio de Sesión - Rinconcito De Patas</title>
+    <link
+      rel="icon"
+      href="../img/ultimafinalfinalfinal.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg border-body navbar-custom">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="../img/logo.png"
+              alt="Logo"
+              width="90"
+              height="85"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button id="menu-toggle" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nuestros_productos.html"
+                  >Nuestros Productos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="agendar_hora.html">Agendar Hora</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="inicio_sesion.html">Inicio sesión</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar un producto"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success me-5" type="submit">
+                Buscar
+              </button>
+              <a
+                class="btn btn btn-outline-success me-4"
+                href="carrito_compra.html"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-cart4"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+                  />
+                </svg>
+              </a>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- MODAL -->
+      <section>
+        <div id="myModal" class="modal">
+          <div class="modal-content-menu">
+            <ul id="modalles" class="navbar-nav menu-items-modal">
+              <li class="li-menu">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="li-menu">
+                <a class="nav-link" href="nuestros_productos.html"
+                  >Nuestros Productos</a
+                >
+              </li>
+              <li class="li-menu">
+                <a class="nav-link" href="agendar_hora.html">Agendar Hora</a>
+              </li>
+              <li class="li-menu">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="li-menu">
+                <a class="nav-link" href="inicio_sesion.html">Inicio sesión</a>
+              </li>
+              <li><button class="menu-close-btn">Cerrar</button></li>
+            </ul>
+            <form id="formmenu" role="search">
+              <div class="formmenos">
+                <button class="btn-outline-success-s me-5" type="submit">
+                  <a
+                    class="btn-outline-success-s me-4"
+                    href="carrito_compra.html"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-cart4"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+                      />
+                    </svg>
+                  </a>
+                </button>
+              </div>
+              <div class="formmenuuno">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Buscar un producto"
+                  aria-label="Search"
+                />
+              </div>
+              <div class="formmenudos">
+                <button class="btn-outline-success-s me-5" type="submit">
+                  Buscar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="flex-shrink-0">
+      <!-- segundo select-->
+      <section class="cards-section-loMasVendido">
+        <!--Section Login -->
+        <section class="login_login">
+          <!--Contenedor de Login-->
+          <div class="card_login">
+            <!--Imagen de Login-->
+            <img class="logo_login" src="../img/logo_login.png" />
+            <!--Titulo de Login-->
+            <h2 class="h2_login">Iniciar sesión</h2>
+            <!--Formulario del Login-->
+            <form class="form_login">
+              <!--Input Correo-->
+              <input class="input_login" type="email" placeholder="Correo" />
+              <!--Input Contraseña-->
+              <input type="password" placeholder="Contraseña" />
+              <!--Boton Login-->
+              <button class="btn btn-custom-cerrar-advertencia">
+                Iniciar Sesión
+              </button>
+            </form>
+            <!--Footer del Login-->
+            <footer>
+              ¿No eres miembro?
+              <a href="#" id="openModalBtn" onclick="openModalBtn()">
+                Registrate</a
+              >
+              <br />
+              <!-- Login con RRSS -->
+              <p>O inicia sesión con:</p>
+              <!--Boton Facebook-->
+              <a type="button" class="text-purple mx-2">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <!--Boton Twitter-->
+              <a type="button" class="text-purple mx-2">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <!--Boton Google-->
+              <a type="button" class="text-purple mx-2">
+                <i class="fa fa-google"></i>
+              </a>
+              <!--Boton Instagram-->
+              <a type="button" class="text-purple mx-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </footer>
+          </div>
+        </section>
+
+        <!--Section  Modal.Registro-->
+        <section>
+          <div id="myModal2" class="modal2">
+            <div class="modal-content2">
+              <!-- Boton Cerrar-->
+              <span class="close2">&times;</span>
+              <!-- Elementos Internos del Modal-->
+              <div class="card_login_modal">
+                <!--Esta es la zona del contenedor de la zona superior (naranja)-->
+                <!--Imagen del Modal-->
+                <img class="logo_login_modal" src="../img/logo_login.png" />
+                <!--Titulo de Modal.Registrate-->
+                <h2 class="h2_login_modal">Regístrate</h2>
+                <!--Imagen del Modal-->
+                <form class="form_login_modal">
+                  <!--Input nombre Modal.Registro-->
+                  <input
+                    class="input_login_modal"
+                    type="nombre"
+                    placeholder="Nombres"
+                  />
+                  <!--Input apellido Modal.Registro-->
+                  <input
+                    class="input_login_modal"
+                    type="apellido"
+                    placeholder="Apellidos"
+                  />
+                  <!--Input correo Modal.Registro-->
+                  <input
+                    class="input_login_modal"
+                    type="email"
+                    placeholder="e-mail"
+                  />
+                  <!--Input teléfono Modal.Registro-->
+                  <input
+                    class="input_login_modal"
+                    type="numero"
+                    placeholder="Número de teléfono"
+                  />
+                  <!--Input crear.contraseña Modal.Registro-->
+                  <input type="password" placeholder="Contraseña" />
+                  <!--En pequeñito debajo de "contraseña" para indicar las características de la contraseña-->
+                  <small
+                    id="defaultRegisterFormPasswordHelpBlock"
+                    class="form-text text-black-40"
+                  >
+                    Al menos 8 caracteres y 1 número*
+                  </small>
+                  <!--Boton Registrarse de Modal.Registro-->
+                  <button class="btn btn-custom-cerrar-advertencia">
+                    Registrarse
+                  </button>
+                </form>
+                <!-- Registro con RRSS -->
+                <footer>
+                  <p>O Registrarse con:</p>
+                  <!--Boton Facebook de Modal.Registro-->
+                  <a type="button" class="text-purple mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <!--Boton Twitter de Modal.Registro-->
+                  <a type="button" class="text-purple mx-2">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <!--Boton Google de Modal.Registro-->
+                  <a type="button" class="text-purple mx-2">
+                    <i class="fa fa-google"></i>
+                  </a>
+                  <!--Boton Instagram de Modal.Registro-->
+                  <a type="button" class="text-purple mx-2">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Modal LOGEADO -->
+      <section>
+        <div
+          class="modal fade"
+          id="modalExito"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header" style="justify-content: center">
+                <h5 class="modal-title fs-5" id="modalExito">
+                  BIENVENIDO NUEVAMENTE
+                </h5>
+              </div>
+              <div class="modal-footer" style="justify-content: center">
+                <button
+                  type="button"
+                  data-bs-dismiss="modal"
+                  class="btn btn-custom-cerrar-advertencia"
+                >
+                  Aceptar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal de Registro Exitoso -->
+      <section>
+        <div
+          class="modal fade"
+          id="modalRegistroExitoso"
+          tabindex="-1"
+          aria-labelledby="modalRegistroExitosoLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <!-- Agrega la clase text-center aquí -->
+                <h5 class="modal-title fs-5" id="modalRegistroExitosoLabel">
+                  ¡Registro Exitoso!
+                </h5>
+              </div>
+              <div class="modal-body">¡Te has registrado exitosamente!</div>
+              <div class="modal-footer" style="justify-content: center">
+                <button
+                  type="button"
+                  class="btn btn-custom-cerrar-advertencia"
+                  data-bs-dismiss="modal"
+                >
+                  Aceptar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Boton flotante -->
+      <section>
+        <div
+          style="position: fixed; bottom: 10px; right: 50px"
+          class="botonayuda"
+        >
+          <input type="checkbox" />
+          <div class="btn"></div>
+          <div class="tooltip">
+            <p class="mt-2 mb-1">¿Necesitas ayuda con tu adopción?</p>
+            <a href="../page/adopcion.html">Haz click aquí;)</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-custom-footer text-center text-lg-start">
+      <div class="container p-2">
+        <div class="row my-4">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div
+              class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
+              style="width: 150px; height: 150px"
+            >
+              <img
+                src="../img/logo_login.png"
+                height="100%"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+
+            <p class="text-center">
+              Somos la empresa número 1# en el cuidado y bienestar de tus
+              mascotas y animales
+            </p>
+
+            <ul class="list-unstyled d-flex flex-row justify-content-center">
+              <li>
+                <a class="text-white px-2" href="#!">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-white px-2" href="#!">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-white ps-2" href="#!">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Preguntas Frecuentes</h5>
+
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fas fa-paw pe-3"></i>¿Como solicito una hora?</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fas fa-paw pe-3"></i>¿Qué comida debo comprar?</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fas fa-paw pe-3"></i>¿Es recomendable adoptar?</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fas fa-paw pe-3"></i>¿Puedo pagar en cuotas?</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fas fa-paw pe-3"></i>¿Realizan consultas a
+                  domicilio?</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fas fa-paw pe-3"></i>¿Aceptan Junaeb?</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fas fa-paw pe-3"></i>Mi perro comió chocolate</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Opciones</h5>
+
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fa-solid fa-paperclip pe-3"></i>Mi Cuenta</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fa-solid fa-paperclip pe-3"></i>Mis Pedidos</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fa-solid fa-paperclip pe-3"></i>Seguimiento de
+                  compra</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fa-solid fa-paperclip pe-3"></i>Preguntas y
+                  Respuestas</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"
+                  ><i class="fa-solid fa-paperclip pe-3"></i>Términos y
+                  Condiciones</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Contacto</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  <i class="fas fa-map-marker-alt pe-2"></i>Av Américo Vespucio
+                  1501, Santiago
+                </p>
+              </li>
+              <li>
+                <p><i class="fas fa-phone pe-2"></i>+ 56 9 2468 1548</p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-envelope pe-2 mb-0"></i
+                  >contacto@rinconcitodepatas.cl
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2024 Copyright - Rinconcito de Patas ♥
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="../js/inicio_sesion.js"></script>
+    <script src="../js/boton_menu.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/9733e9b559.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
